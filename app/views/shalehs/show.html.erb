@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @shaleh.address %>
+</p>
+
+<p>
+  <strong>Rooms:</strong>
+  <%= @shaleh.rooms %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @shaleh.description %>
+</p>
+
+<p>
+  <strong>Aircon:</strong>
+  <%= @shaleh.aircon %>
+</p>
+
+<p>
+  <strong>References:</strong>
+  <%= @shaleh.references %>
+</p>
+
+<%= link_to 'Edit', edit_shaleh_path(@shaleh) %> |
+<%= link_to 'Back', shalehs_path %>

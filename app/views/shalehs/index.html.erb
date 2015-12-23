@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Shalehs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Rooms</th>
+      <th>Description</th>
+      <th>Aircon</th>
+      <th>References</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shalehs.each do |shaleh| %>
+      <tr>
+        <td><%= shaleh.address %></td>
+        <td><%= shaleh.rooms %></td>
+        <td><%= shaleh.description %></td>
+        <td><%= shaleh.aircon %></td>
+        <td><%= shaleh.references %></td>
+        <td><%= link_to 'Show', shaleh %></td>
+        <td><%= link_to 'Edit', edit_shaleh_path(shaleh) %></td>
+        <td><%= link_to 'Destroy', shaleh, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shaleh', new_shaleh_path %>
